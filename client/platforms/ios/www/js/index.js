@@ -21,9 +21,7 @@ var app = {
     initialize: function() { },
 
 	handlePictureSnap: function(imageData) {
-		var smallImage = document.getElementById('camera');
-		this.imageData = imageData;
-		smallImage.src = "data:image/jpeg;base64," + imageData;
+		document.getElementById('camera').setAttribute('src', "data:image/jpeg;base64," + imageData);
 	},
 
 	onFail: function(error) {
