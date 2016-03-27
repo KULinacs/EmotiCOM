@@ -68,14 +68,14 @@
 				</div>
 				<div id="manual-input-body" class="collapsible-body grey lighten-4">
 					123test
-					<textarea style="width:100%">
+					<textarea id="whats-mind" style="width:100%">
 					</textarea>
-					<input type="button" value="Submit" onclick="app.updateEmotion()">
+					<input type="button" id="manual-input-button" value="Submit" onclick="app.submitMind()">
 				</div>
 			</li>
 			<li>
                 <div id="settings" class="collapsible-header grey darken-3">
-	<i class="material-icons">&#xE8A6;</i>
+	<i class="material-icons">settings</i>
                         <p id="settings-text" style="color:white;">Settings</p>
                 </div>
                 <div id="settings-body" class="collapsible-body grey lighten-4"><p> testy </p>
@@ -83,7 +83,7 @@
             </li>
             <li> 
 			  <div id="camera-area" class="collapsible-header grey darken-3" onclick="app.pictureSnap()">
-                <i class="material-icons">chat_bubble_outline</i>
+                <i class="material-icons">camera_enhance</i>
 					<p id="camera-area-text" style="color:white;">Camera</p>
 				</div>
 				<div id="camera-area-body" class="collapsible-body grey lighten-4">

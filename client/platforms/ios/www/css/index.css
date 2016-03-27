@@ -141,8 +141,11 @@ h1 {
 
 p {
     margin-top: 0;
-<<<<<<< HEAD
+    margin-bottom: 0;
+	font-weight: bold;
+    vertical-align: center;
 }
+
 
 @font-face {
   font-family: 'Material Icons';
@@ -155,15 +158,9 @@ p {
        url("../font/material-design-icons/Material-Design-Icons.woff") format('woff'),
        url("../font/material-design-icons/Material-Design-Icons.ttf") format('truetype');
 }
-=======
-    margin-bottom: 0;
-	font-weight: bold;
-    vertical-align: center;
-}
 
 .collapsible-header {
     padding-top: 10px !important;
     padding-bottom: 10px !important;
     border-bottom: 1px solid #333 !important;
 }
->>>>>>> 4381865c23c94bd8d8050e296932bf5240e3d51d
