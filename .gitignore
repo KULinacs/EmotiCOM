@@ -10,4 +10,5 @@ local/
 .pyc
 
 # Temporary Files
+.DS_Store
 *~
