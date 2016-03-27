@@ -58,8 +58,8 @@ var app = {
 		} else if (ToneEnum.DISGUST === emotion) {
 			headerColor = "#388e3c";
     		contentColor = "#e8f5e9";
-			textColor = "#616161";
-			buttonColor = "#b9f6ca";
+			textColor = "#424242";
+			buttonColor = "#82b1ff";
 		} else if (ToneEnum.FEAR === emotion) {
 			headerColor = "#7b1fa2";
     		contentColor = "#f3e5f5";
