@@ -16,13 +16,24 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 var app = {
     // Application Constructor
-    initialize: function() { },
+    initialize: function() {
+		app.faceData = {};
+		app.toneData = {};
+		_.forIn(ToneEnum, function(val, key) {
+			app.faceData[val] = 0;
+			app.toneData[val] = 0;
+		});
+	},
 
 	handlePictureSnap: function(imageData) {
 	    document.getElementById('camera').setAttribute('src', "data:image/jpeg;base64," + imageData);
-	    upload(imageData);
+		getFaceData(imageData, function(faceData) {
+			app.faceData = faceData;
+			app.updateEmotion();
+		})
 	},
 
 	onFail: function(error) {
@@ -32,5 +43,14 @@ var app = {
 	pictureSnap: function() {
 		navigator.camera.getPicture(app.handlePictureSnap, app.onFail, { quality: 50 });
 	},
-    
+
+	updateEmotion: function() {
+		var overall = _.mapKeys(WatsonToToneEnum, function(key) {
+			return app.faceData[key] + app.toneData[key];
+		});
+		overall = _.toPairs(overall);
+		var emotion = _.maxBy(overall, function(pair){ return Number(pair[0]); })[1];
+		$('#emotions-output').text(ToneToString[emotion]);
+		
+	},
 };

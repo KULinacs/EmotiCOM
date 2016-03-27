@@ -49,8 +49,8 @@ var app = {
 			return app.faceData[key] + app.toneData[key];
 		});
 		overall = _.toPairs(overall);
-		console.log(overall);
-		var max_pair = _.maxBy(overall, function(pair){ return Number(pair[0]); });
-		console.log(max_pair);
+		var emotion = _.maxBy(overall, function(pair){ return Number(pair[0]); })[1];
+		$('#emotions-output').text(ToneToString[emotion]);
+		
 	},
 };
