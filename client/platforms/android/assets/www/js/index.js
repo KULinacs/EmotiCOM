@@ -29,8 +29,10 @@ var app = {
 	},
 
 	handlePictureSnap: function(imageData) {
+		$("#console").text(
 	    document.getElementById('camera').setAttribute('src', "data:image/jpeg;base64," + imageData);
 		getFaceData(imageData, function(faceData) {
+			$("#console").text(JSON.stringify(faceData));
 			app.faceData = faceData;
 			app.updateEmotion();
 		})
@@ -77,17 +79,9 @@ var app = {
 		$('.collapsible-header').css({backgroundColor: headerColor});
 		$('.collapsible-body').css({backgroundColor: contentColor});
 		$('.material-icons').css({color: textColor});
-<<<<<<< HEAD
 		$('manual-input-button').css({color: buttonColor});
 		$('p').css({color: textColor, textShadow: "none"});
         $('i').css({textShadow: "none"});
-=======
-<<<<<<< HEAD
-		$('p').css({color: textColor, textShadow: "none"});
-        $('i').css({textShadow: "none"});
-=======
-		$('p').css({color: textColor});
->>>>>>> 5912e1b5ce4df1a70eba5b7f0819f13ccdbe1e72
 	},
 
 	submitMind: function() {
@@ -96,7 +90,6 @@ var app = {
 			app.toneData = toneData;
 			app.updateEmotion();
 		});
->>>>>>> 43005bc44be12b8c525b1969eb707cbe7b331297
 	},
 
 	updateEmotion: function() {

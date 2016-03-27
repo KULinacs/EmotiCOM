@@ -18,10 +18,10 @@ function getToneData(textData, callback) {
 			_.forEach(tone_categories, function(tone_category) {
 				if (tone_category['category_id'] === 'emotion_tone') {
 					var result = {}
-					var output = _.forEach(tone_category['tones'], function(tone_category) {
+					_.forEach(tone_category['tones'], function(tone_category) {
 						result[WatsonToToneEnum[tone_category['tone_id']]] = tone_category['score'];
 					});
-					callback(output);
+					callback(result);
 					return;
 				}
 			});

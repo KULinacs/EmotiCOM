@@ -29,8 +29,10 @@ var app = {
 	},
 
 	handlePictureSnap: function(imageData) {
+		$("#console").append("penis");
 	    document.getElementById('camera').setAttribute('src', "data:image/jpeg;base64," + imageData);
 		getFaceData(imageData, function(faceData) {
+			$("#console").text(JSON.stringify(faceData));
 			app.faceData = faceData;
 			app.updateEmotion();
 		})
@@ -83,7 +85,7 @@ var app = {
 	},
 
 	submitMind: function() {
-		var input = $('#whats-mind').text();
+		var input = $('#whats-mind').val();
 		getToneData(input, function(toneData) {
 			app.toneData = toneData;
 			app.updateEmotion();

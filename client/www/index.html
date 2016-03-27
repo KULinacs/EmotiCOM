@@ -49,7 +49,7 @@
 	<ul class="collapsible z-depth-3" data-collapsible="accordion" id="main">
 	  <li>
 		<div id="social-media" class="collapsible-header grey darken-3">
-          <p id="social-media-text" style="color:white;">Social Media </p>
+          <p id="social-media-text" style="color:white;">Social Media</p>
  		</div>
  		<div id="social-media-body" class="collapsible-body grey lighten-4">
 		  1234test
@@ -60,10 +60,9 @@
           <p id="manual-input-text" style="color:white;">What's on your mind?</p>
 		</div>
 		<div id="manual-input-body" class="collapsible-body grey lighten-4">
-		  123test
-		  <textarea style="width:100%">
+		  <textarea id="whats-mind" style="width:100%">
 		  </textarea>
-		  <input type="button" value="Submit" onclick="app.updateEmotion()">
+		  <input type="button" value="Submit" onclick="app.submitMind()">
 		</div>
 	  </li>
 	  <li>
@@ -86,6 +85,8 @@
         </div>
       </li>    
 	</ul>
+	<code id="console">
+	</code>
 	<script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/jquery-1.11.1.min.js" id="cordova-jquery"></script>
 	<script type="text/javascript" id="jqm-trans-disable">

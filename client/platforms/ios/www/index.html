@@ -15,109 +15,99 @@
 	Unless required by applicable law or agreed to in writing,
 	software distributed under the License is distributed on an
 	"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-	 KIND, either express or implied.  See the License for the
+	KIND, either express or implied.  See the License for the
 	specific language governing permissions and limitations
 	under the License.
--->
+  -->
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="format-detection" content="telephone=no">
-		<meta name="msapplication-tap-highlight" content="no">
-		<!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-
-		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height">
-		<link rel="stylesheet" type="text/css" href="css/index.css">
-		<link rel="stylesheet" type="text/css" href="css/materialize.css">
-		<link rel="stylesheet" type="text/css" href="js/jquery-1.5.0.mobile.min.css">
-		<!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
-                <style>
-		/* For avoiding title truncation in wp8 */
-		.ui-header .ui-title {
-				overflow: visible !important;
-		}
-		/* For fixing the absolute position issue for the default cordova gen page*/
-		#cjp-accordion1 .app {
-				left: 5px !important;
-				margin: 5px !important;
-				position: relative !important;
-		}
-		</style>
-
-		<script type="text/javascript" src="js/jquery-min.js"></script>
-		<script src="js/materialize.js"></script>
-		<title>ZemotionET</title>
-        </head>
-	<body>
-		<ul class="collapsible z-depth-3" data-collapsible="accordion" id="main">
-			<li>
-
-				 <div id="social-media" class="collapsible-header grey darken-3">
-                                     <i class="material-icons ">contacts</i>
-					<p id="social-media-text" style="color:white;">Social Media </p>
-				</div>
-				<div id="social-media-body" class="collapsible-body grey lighten-4">
-					1234test
-				</div>
-			</li>
-			<li>
-				<div id="manual-input" class="collapsible-header grey darken-3">
-                                    <i class="material-icons">chat_bubble_outline</i>
-					<p id="manual-input-text" style="color:white;">What's on your mind?</p>								
-
-				</div>
-				<div id="manual-input-body" class="collapsible-body grey lighten-4">
-					123test
-					<textarea id="whats-mind" style="width:100%">
-					</textarea>
-					<input type="button" id="manual-input-button" value="Submit" onclick="app.submitMind()">
-				</div>
-			</li>
-			<li>
-                <div id="settings" class="collapsible-header grey darken-3">
-	<i class="material-icons">settings</i>
-                        <p id="settings-text" style="color:white;">Settings</p>
-                </div>
-                <div id="settings-body" class="collapsible-body grey lighten-4"><p> testy </p>
-                </div>
-            </li>
-            <li> 
-			  <div id="camera-area" class="collapsible-header grey darken-3" onclick="app.pictureSnap()">
-                <i class="material-icons">camera_enhance</i>
-					<p id="camera-area-text" style="color:white;">Camera</p>
-				</div>
-				<div id="camera-area-body" class="collapsible-body grey lighten-4">
-						<img id="camera">
-                </div>
-                        <!-- <input type="button" value="Click me" onclick="app.pictureSnap()"> -->          
-            <li>
-                <div id="emotions" class="collapsible-header grey darken-3">
-                    <i class="material-icons">&#xE8A6;</i>
-                    <p id="emotions-text" style="color:white;">You are feeling <span id="emotions-output"></span></p>
-                    
-                </div>
-            </li>    
-		</ul>
-		<script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/jquery-1.11.1.min.js" id="cordova-jquery"></script>
-		<script type="text/javascript" id="jqm-trans-disable">
-		/* For having a faster transition */
-		$(document).on("mobileinit", function() {
-				$.mobile.defaultPageTransition = "none";
-				$.mobile.defaultDialogTransition = "none";
-		});
-		</script>
-        <script type="text/javascript" src="js/jquery-1.5.0.mobile.min.js"></script>
-		<script type="text/javascript" src="js/oxford.js"></script>
-		<script type="text/javascript" src="js/tone.js"></script>
-		<script type="text/javascript" src="js/toneenum.js"></script>
-		<script type="text/javascript" src="js/lodash.min.js"></script>
-		<!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/lodash/4.6.1/lodash.min.js"></script> -->
-		<script type="text/javascript" src="js/index.js"></script>
-		<script type="text/javascript">
-			app.initialize();
-		</script>
-		<div id="music">
+  <head>
+	<meta charset="utf-8">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="msapplication-tap-highlight" content="no">
+	<!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/materialize.css">
+	<link rel="stylesheet" type="text/css" href="js/jquery-1.5.0.mobile.min.css">
+    <style>
+	  /* For avoiding title truncation in wp8 */
+	  .ui-header .ui-title {
+	  overflow: visible !important;
+	  }
+	  /* For fixing the absolute position issue for the default cordova gen page*/
+	  #cjp-accordion1 .app {
+	  left: 5px !important;
+	  margin: 5px !important;
+	  position: relative !important;
+	  }
+	</style>
+	<script type="text/javascript" src="js/jquery-min.js"></script>
+	<script src="js/materialize.js"></script>
+	<title>ZemotionET</title>
+  </head>
+  <body>
+	<ul class="collapsible z-depth-3" data-collapsible="accordion" id="main">
+	  <li>
+		<div id="social-media" class="collapsible-header grey darken-3">
+          <p id="social-media-text" style="color:white;">Social Media</p>
+ 		</div>
+ 		<div id="social-media-body" class="collapsible-body grey lighten-4">
+		  1234test
 		</div>
-	</body>
+	  </li>
+	  <li>
+		<div id="manual-input" class="collapsible-header grey darken-3">
+          <p id="manual-input-text" style="color:white;">What's on your mind?</p>
+		</div>
+		<div id="manual-input-body" class="collapsible-body grey lighten-4">
+		  123test
+		  <textarea style="width:100%">
+		  </textarea>
+		  <input type="button" value="Submit" onclick="app.updateEmotion()">
+		</div>
+	  </li>
+	  <li>
+        <div id="settings" class="collapsible-header grey darken-3">
+          <p id="settings-text" style="color:white;">Settings</p>
+        </div>
+        <div id="settings-body" class="collapsible-body grey lighten-4"><p> testy </p>
+        </div>
+      </li>
+      <li> 
+		<div id="camera-area" class="collapsible-header grey darken-3" onclick="app.pictureSnap()">
+		  <p id="camera-area-text" style="color:white;">Camera</p>
+		  <img id="camera">
+		</div>
+        <!-- <input type="button" value="Click me" onclick="app.pictureSnap()"> -->          
+	  </li>
+      <li>
+        <div id="emotions" class="collapsible-header grey darken-3">
+          <p id="emotions-text" style="color:white;">You are feeling <span id="emotions-output"></span></p>
+        </div>
+      </li>    
+	</ul>
+	<code id="console">
+	</code>
+	<script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js" id="cordova-jquery"></script>
+	<script type="text/javascript" id="jqm-trans-disable">
+	  /* For having a faster transition */
+	  $(document).on("mobileinit", function() {
+	  $.mobile.defaultPageTransition = "none";
+	  $.mobile.defaultDialogTransition = "none";
+	  });
+	</script>
+    <script type="text/javascript" src="js/jquery-1.5.0.mobile.min.js"></script>
+	<script type="text/javascript" src="js/oxford.js"></script>
+	<script type="text/javascript" src="js/tone.js"></script>
+	<script type="text/javascript" src="js/toneenum.js"></script>
+	<script type="text/javascript" src="js/lodash.min.js"></script>
+	<!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/lodash/4.6.1/lodash.min.js"></script> -->
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript">
+	  app.initialize();
+	</script>
+	<div id="music">
+	</div>
+  </body>
 </html>
