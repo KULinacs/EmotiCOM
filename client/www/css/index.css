@@ -32,8 +32,8 @@ body {
         linear,
         left top,
         left bottom,
-        color-stop(0, #311B92),
-        color-stop(0.21, #4527A0)
+        color-stop(0, #eeeeee),
+        color-stop(0.0, #eeeeee)
     );
     background-attachment:fixed;
     font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
