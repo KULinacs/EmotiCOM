@@ -73,6 +73,7 @@ var app = {
 		$('.collapsible-body').css({backgroundColor: contentColor});
 		$('.material-icons').css({color: textColor});
 		$('p').css({color: textColor});
+<<<<<<< HEAD
 	},
 
 	submitMind: function() {
@@ -81,6 +82,8 @@ var app = {
 			app.toneData = toneData;
 			app.updateEmotion();
 		});
+=======
+>>>>>>> 4381865c23c94bd8d8050e296932bf5240e3d51d
 	},
 
 	updateEmotion: function() {

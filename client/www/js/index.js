@@ -52,27 +52,34 @@ var app = {
     		headerColor = "#d32f2f";
     		contentColor = "#ffebee";
 			textColor = "#212121";
+			buttonColor = "#ff8a80";
 		} else if (ToneEnum.DISGUST === emotion) {
 			headerColor = "#388e3c";
     		contentColor = "#e8f5e9";
 			textColor = "#616161";
+			buttonColor = "#b9f6ca";
 		} else if (ToneEnum.FEAR === emotion) {
 			headerColor = "#7b1fa2";
     		contentColor = "#f3e5f5";
 			textColor = "#9e9e9e";
+			buttonColor = "#ea80fc";
 		} else if (ToneEnum.JOY === emotion) {
 			headerColor = "#fbc02d";
     		contentColor = "#fffde7";
 			textColor = "#424242";
+			buttonColor = "#ffff8d";
 		} else {
 			headerColor = "#1976d2";
     		contentColor = "#e3f2fd";
 			textColor = "#212121";
+			buttonColor = "#82b1ff";
 		}
 		$('.collapsible-header').css({backgroundColor: headerColor});
 		$('.collapsible-body').css({backgroundColor: contentColor});
 		$('.material-icons').css({color: textColor});
-		$('p').css({color: textColor});
+		$('manual-input-button').css({color: buttonColor});
+		$('p').css({color: textColor, textShadow: "none"});
+        $('i').css({textShadow: "none"});
 	},
 
 	submitMind: function() {
