@@ -27,28 +27,43 @@
 		<!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
 		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
 		<link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" type="text/css" href="css/materialize.css" />
 		<title>ZemotionET</title>
 	</head>
 	<body>
-		<div class="app">
-			<div id="social-media" class="boxxy">
-				Social Media
-			</div>
-			<div id ="manual-input" class="boxxy">
-				What's on your mind?				
-				<textarea style="width:100%">
-				</textarea>
-			</div>
-			<div id="settings" class="boxxy">
-				Settings
-			</div>
+		<ul class="collapsible" data-collapsible="accordion">
+			<li>
+				 <div id="social-media" class="collapsible-header">
+					Social Media
+				</div>
+				<div class="collapsible-body">
+					123test
+				</div>
+			</li>
+			<li>
+				<div id ="manual-input" class="collapsible-header">
+					What's on your mind?				
+					<textarea style="width:100%">
+					</textarea>
+				</div>
+				<div class="collapsible-body">
+					123test
+				</div>
+			</li>
+			<li>
+                <div id="settings" class="collapsible-header">
+					Settings
+                </div>
+                <div class="collapsible-body"><p> testy </p>
+                </div>
+                        </li>
 			<div id="camera-area">
 				<img id="camera" />
 			</div>
 			<input type="button" value="Click me" onclick="app.pictureSnap()" />
 			<div id="music">
 			</div>
-		</div>
+		</ul>
 		<script type="text/javascript" src="cordova.js"></script>
 		<script type="text/javascript" src="js/index.js"></script>
 		<script type="text/javascript">
