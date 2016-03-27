@@ -72,8 +72,20 @@ var app = {
 		$('.collapsible-header').css({backgroundColor: headerColor});
 		$('.collapsible-body').css({backgroundColor: contentColor});
 		$('.material-icons').css({color: textColor});
+<<<<<<< HEAD
 		$('p').css({color: textColor, textShadow: "none"});
         $('i').css({textShadow: "none"});
+=======
+		$('p').css({color: textColor});
+	},
+
+	submitMind: function() {
+		var input = $('#whats-mind').text();
+		getToneData(input, function(toneData) {
+			app.toneData = toneData;
+			app.updateEmotion();
+		});
+>>>>>>> 43005bc44be12b8c525b1969eb707cbe7b331297
 	},
 
 	updateEmotion: function() {

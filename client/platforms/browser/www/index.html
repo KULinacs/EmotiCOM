@@ -30,7 +30,7 @@
 		<link rel="stylesheet" type="text/css" href="css/index.css">
 		<link rel="stylesheet" type="text/css" href="css/materialize.css">
 		<link rel="stylesheet" type="text/css" href="js/jquery-1.5.0.mobile.min.css">
-		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
                 <style>
 		/* For avoiding title truncation in wp8 */
 		.ui-header .ui-title {
@@ -68,9 +68,9 @@
 				</div>
 				<div id="manual-input-body" class="collapsible-body grey lighten-4">
 					123test
-					<textarea style="width:100%">
+					<textarea id="whats-mind" style="width:100%">
 					</textarea>
-					<input type="button" value="Submit" onclick="app.updateEmotion()">
+					<input type="button" id="manual-input-button" value="Submit" onclick="app.submitMind()">
 				</div>
 			</li>
 			<li>
@@ -111,7 +111,8 @@
 		<script type="text/javascript" src="js/oxford.js"></script>
 		<script type="text/javascript" src="js/tone.js"></script>
 		<script type="text/javascript" src="js/toneenum.js"></script>
-		<script type="text/javascript" src="https://cdn.jsdelivr.net/lodash/4.6.1/lodash.min.js"></script>
+		<script type="text/javascript" src="js/lodash.min.js"></script>
+		<!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/lodash/4.6.1/lodash.min.js"></script> -->
 		<script type="text/javascript" src="js/index.js"></script>
 		<script type="text/javascript">
 			app.initialize();

@@ -146,6 +146,19 @@ p {
     vertical-align: center;
 }
 
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../font/material-design-icons/Material-Design-Icons.eot"); /* For IE6-8 */
+  src: local('Material Icons'),
+       local('MaterialIcons-Regular'),
+       url("../font/material-design-icons/Material-Design-Icons.woff2") format('woff2'),
+       url("../font/material-design-icons/Material-Design-Icons.woff") format('woff'),
+       url("../font/material-design-icons/Material-Design-Icons.ttf") format('truetype');
+}
+
 .collapsible-header {
     padding-top: 10px !important;
     padding-bottom: 10px !important;
