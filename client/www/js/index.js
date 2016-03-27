@@ -16,12 +16,24 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
 var app = {
     // Application Constructor
-    initialize: function() { },
+    initialize: function() {
+		app.faceData = {};
+		app.toneData = {};
+		_.forIn(ToneEnum, function(val, key) {
+			app.faceData[val] = 0;
+			app.toneData[val] = 0;
+		});
+	},
 
 	handlePictureSnap: function(imageData) {
-		document.getElementById('camera').setAttribute('src', "data:image/jpeg;base64," + imageData);
+	    document.getElementById('camera').setAttribute('src', "data:image/jpeg;base64," + imageData);
+		getFaceData(imageData, function(faceData) {
+			app.faceData = faceData;
+			app.updateEmotion();
+		})
 	},
 
 	onFail: function(error) {
@@ -73,5 +85,36 @@ var app = {
 		
 		
 	},
-    
+
+	updateEmotion: function() {
+		var overall = _.mapKeys(WatsonToToneEnum, function(key) {
+			return app.faceData[key] + app.toneData[key];
+		});
+		overall = _.toPairs(overall);
+		console.log(overall);
+		var max_pair = _.maxBy(overall, function(pair){ return Number(pair[0]); });
+		console.log(max_pair);
+	},
+
+    emotify: function(currentEmote) {
+        app.changeColor(currentEmote);
+        app.changeMusic(currentEmote);
+    },
+
+    changeMusic: function(currentEmote) {
+        if (currentEmote = ToneEnum.ANGER) {
+            $('#music').html('<iframe width="100%" height="100" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/209882281&amp;color=ff5500&amp;auto_play=true&amp;hide_related=true&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false"></iframe>');
+        } else if (currentEmote = ToneEnum.DISGUST) {
+            $('#music').html('<iframe width="100%" height="100" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/209882063&amp;color=ff5500&amp;auto_play=true&amp;hide_related=true&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false"></iframe>');
+        } else if (currentEmote = ToneEnum.FEAR) {
+            $('#music').html('<iframe width="100%" height="100" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/209880966&amp;color=ff5500&amp;auto_play=true&amp;hide_related=true&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false"></iframe>');
+        } else if (currentEmote = ToneEnum.JOY) {
+            $('#music').html('<iframe width="100%" height="100" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/209881431&amp;color=ff5500&amp;auto_play=true&amp;hide_related=true&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false"></iframe>');
+        } else if (currentEmote = ToneEnum.SAD) {
+            $('#music').html('<iframe width="100%" height="100" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/209882561&amp;color=ff5500&amp;auto_play=true&amp;hide_related=true&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false"></iframe>');
+        }
+
+
+
+    }
 };

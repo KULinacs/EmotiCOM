@@ -5,3 +5,11 @@ const ToneEnum = {
     JOY : 3,
     SAD : 4,
 }
+
+const WatsonToToneEnum = {
+	'anger': ToneEnum.ANGER,
+	'disgust': ToneEnum.DISGUST,
+	'fear': ToneEnum.FEAR,
+	'joy': ToneEnum.JOY,
+	'sadness': ToneEnum.SAD,
+};
