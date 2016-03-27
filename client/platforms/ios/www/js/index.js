@@ -69,21 +69,18 @@ var app = {
     		contentColor = "#e3f2fd";
 			textColor = "#212121";
 		}
-		// $('.collapsible-header').css({backgroundColor: headerColor});
-		// $('.collapsible-body').css({backgroundColor: contentColor});
-		// $('.material-icons').css({backgroundColor: textColor});
-		// $('p').css({backgroundColor: textColor});
-		$('#social-media').css({backgroundColor: headerColor});
-		$('#manual-input').css({backgroundColor: headerColor});
-		$('#settings').css({backgroundColor: headerColor});
-		$('#social-media-body').css({backgroundColor: contentColor});
-		$('#manual-input-body').css({backgroundColor: contentColor});
-		$('#settings-body').css({backgroundColor: contentColor});
-		$('#social-media-text').css({backgroundColor: textColor});
-		$('#manual-input-text').css({backgroundColor: textColor});
-		$('#settings-text').css({backgroundColor: textColor});
-		
-		
+		$('.collapsible-header').css({backgroundColor: headerColor});
+		$('.collapsible-body').css({backgroundColor: contentColor});
+		$('.material-icons').css({color: textColor});
+		$('p').css({color: textColor});
+	},
+
+	submitMind: function() {
+		var input = $('#whats-mind').text();
+		getToneData(input, function(toneData) {
+			app.toneData = toneData;
+			app.updateEmotion();
+		});
 	},
 
 	updateEmotion: function() {

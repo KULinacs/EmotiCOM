@@ -75,6 +75,14 @@ var app = {
 		$('p').css({color: textColor});
 	},
 
+	submitMind: function() {
+		var input = $('#whats-mind').text();
+		getToneData(input, function(toneData) {
+			app.toneData = toneData;
+			app.updateEmotion();
+		});
+	},
+
 	updateEmotion: function() {
 		var overall = _.mapKeys(WatsonToToneEnum, function(key) {
 			return app.faceData[key] + app.toneData[key];
