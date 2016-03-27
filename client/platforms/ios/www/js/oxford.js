@@ -9,6 +9,7 @@ function getFaceData(imageData, callback) {
     for (var i = 0, l = byteCount; i < l; i++) {
 		bytesArray[i] = imageDecode.charCodeAt(i);
     }
+	$("#console").append('test8');
     $.ajax({
 		url: oxfordURL,
 		type: 'POST',
@@ -20,12 +21,14 @@ function getFaceData(imageData, callback) {
 		},
 		dataType: 'json',
 		success: function (data) {
+			$("#console").append('test9');
 			faceData = {};
 			faceData[ToneEnum.ANGER] = data[0]['scores']['anger'];
 			faceData[ToneEnum.DISGUST] = data[0]['scores']['disgust'];
 			faceData[ToneEnum.FEAR] = data[0]['scores']['fear'];
 			faceData[ToneEnum.JOY] = data[0]['scores']['happiness'];
 			faceData[ToneEnum.SAD] = data[0]['scores']['sadness'];
+			$("#console").append('faceData');
 			callback(faceData);
 		},
     });

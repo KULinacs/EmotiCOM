@@ -29,10 +29,11 @@ var app = {
 	},
 
 	handlePictureSnap: function(imageData) {
-		$("#console").append("penis");
-	    document.getElementById('camera').setAttribute('src', "data:image/jpeg;base64," + imageData);
+		$("#console").append("test3\n");
+	   // document.getElementById('camera').setAttribute('src', "data:image/jpeg;base64," + imageData);
 		getFaceData(imageData, function(faceData) {
-			$("#console").text(JSON.stringify(faceData));
+			$("#console").append("test5\n");
+			$("#console").text(JSON.stringify(faceData) + '\n');
 			app.faceData = faceData;
 			app.updateEmotion();
 		})
