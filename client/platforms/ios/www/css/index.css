@@ -141,4 +141,13 @@ h1 {
 
 p {
     margin-top: 0;
+    margin-bottom: 0;
+	font-weight: bold;
+    vertical-align: center;
+}
+
+.collapsible-header {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    border-bottom: 1px solid #333 !important;
 }
