@@ -56,7 +56,7 @@
                                      <i class="material-icons ">contacts</i>
 					<p id="social-media-text" style="color:white;">Social Media </p>
 				</div>
-				<div class="collapsible-body grey grey lighten-4">
+				<div id="social-media-body" class="collapsible-body grey darken-2">
 					1234test
 				</div>
 			</li>
@@ -66,7 +66,7 @@
 					<p id="manual-input-text" style="color:white;">What's on your mind?</p>								
 
 				</div>
-				<div class="collapsible-body grey lighten-4">
+				<div id="manual-input-body" class="collapsible-body grey darken-2">
 					123test
 					<textarea style="width:100%">
 					</textarea>
@@ -77,13 +77,16 @@
 	<i class="material-icons">&#xE8A6;</i>
                         <p id="settings-text" style="color:white;">Settings</p>
                 </div>
-                <div class="collapsible-body grey lighten-4"><p> testy </p>
+                <div id="settings-body" class="collapsible-body grey darken-2"><p> testy </p>
                 </div>
             </li>
-			<div id="camera-area">
-				<img id="camera">
+                        <li> 
+			<div id="camera-area" class="collapsible-header grey darken-3" onclick="app.pictureSnap()">
+				<p id="camera-area-text" style="color:white;">Camera</p><img id="camera">
 			</div>
-			<input type="button" value="Click me" onclick="app.pictureSnap()">
+                        <!-- <input type="button" value="Click me" onclick="app.pictureSnap()"> -->
+                        
+                        
             <li>
                 <div id="emotions" class="collapsible-header grey darken-3">
                     <i class="material-icons">&#xE8A6;</i>
