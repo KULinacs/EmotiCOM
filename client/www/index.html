@@ -3,9 +3,9 @@
 	Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
 
 	Licensed to the Apache Software Foundation (ASF) under one
-	or more contributor license agreements.  See the NOTICE file
+	or more contributor license agreements.	 See the NOTICE file
 	distributed with this work for additional information
-	regarding copyright ownership.  The ASF licenses this file
+	regarding copyright ownership.	The ASF licenses this file
 	to you under the Apache License, Version 2.0 (the
 	"License"); you may not use this file except in compliance
 	with the License.  You may obtain a copy of the License at
@@ -25,7 +25,7 @@
 		<meta name="format-detection" content="telephone=no" />
 		<meta name="msapplication-tap-highlight" content="no" />
 		<!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
 		<link rel="stylesheet" type="text/css" href="css/index.css" />
 		<title>ZemotionET</title>
 	</head>
@@ -34,16 +34,23 @@
 			<div id="social-media" class="boxxy">
 				Social Media
 			</div>
+<<<<<<< HEAD
 			<div id ="manual-input" class="boxxy">
 				What's on your mind?				
+=======
+			<div id ="manual-input">
+				What's on your mind?
+>>>>>>> origin/master
 				<textarea style="width:100%">
 				</textarea>
 			</div>
 			<div id="settings" class="boxxy">
 				Settings
 			</div>
-			<div id="camera">
+			<div id="camera-area">
+				<img id="camera" />
 			</div>
+			<input type="button" value="Click me" onclick="app.pictureSnap()" />
 			<div id="music">
 			</div>
 		</div>
