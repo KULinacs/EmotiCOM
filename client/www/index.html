@@ -80,10 +80,13 @@
                 <div class="collapsible-body grey lighten-4"><p> testy </p>
                 </div>
             </li>
-			<div id="camera-area">
-				<img id="camera">
+                        <li> 
+			<div id="camera-area" class="collapsible-header grey darken-3" onclick="app.pictureSnap()">
+				<p id="camera-area-text" style="color:white;">Camera</p><img id="camera">
 			</div>
-			<input type="button" value="Click me" onclick="app.pictureSnap()">
+                        <!-- <input type="button" value="Click me" onclick="app.pictureSnap()"> -->
+                        
+                        
             <li>
                 <div id="emotions" class="collapsible-header grey darken-3">
                     <i class="material-icons">perm_identity</i>
