@@ -149,4 +149,5 @@ p {
 .collapsible-header {
     padding-top: 10px !important;
     padding-bottom: 10px !important;
+    border-bottom: 1px solid #333 !important;
 }
