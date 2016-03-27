@@ -127,3 +127,10 @@ h1 {
     animation:fade 3000ms infinite;
     -webkit-animation:fade 3000ms infinite;
 }
+
+#music {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+}

@@ -39,7 +39,7 @@ function upload(imageData) {
 		maxString = 'sadness';
 		maxEnum = ToneEnum.SAD;
 	    }
-	    return maxEnum;
+	    alert(maxEnum);
 	},
     });
 };
