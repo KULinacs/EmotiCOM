@@ -1,6 +1,9 @@
 # Vagrant
 .vagrant/
 
+# phonegap
+platform/
+
 # Python
 bin/
 build/

@@ -21,14 +21,11 @@ function getFaceData(imageData, callback) {
 		dataType: 'json',
 		success: function (data) {
 			faceData = {};
-			console.log("0:");
-			console.log(data);
 			faceData[ToneEnum.ANGER] = data[0]['scores']['anger'];
 			faceData[ToneEnum.DISGUST] = data[0]['scores']['disgust'];
 			faceData[ToneEnum.FEAR] = data[0]['scores']['fear'];
 			faceData[ToneEnum.JOY] = data[0]['scores']['happiness'];
 			faceData[ToneEnum.SAD] = data[0]['scores']['sadness'];
-			console.log(faceData);
 			callback(faceData);
 		},
     });
