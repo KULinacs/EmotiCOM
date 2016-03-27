@@ -73,7 +73,7 @@ var app = {
 		$('.collapsible-body').css({backgroundColor: contentColor});
 		$('.material-icons').css({backgroundColor: textColor});
 		$('p').css({backgroundColor: textColor});
-// 		$('#social-media').css({backgroundColor: headerColor});
+		// $('#social-media').css({backgroundColor: headerColor});
 // 		$('#manual-input').css({backgroundColor: headerColor});
 // 		$('#settings').css({backgroundColor: headerColor});
 // 		$('#social-media-body').css({backgroundColor: contentColor});
