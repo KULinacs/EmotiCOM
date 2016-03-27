@@ -20,7 +20,6 @@ function upload(imageData) {
 	},
 	dataType: 'json',
 	success: function (data) {
-	    alert(data[0]['scores']['anger']);
 	    var maxString = 'anger';
 	    var maxEnum = ToneEnum.ANGER;
 	    if (data[0]['scores'][maxString] < data[0]['scores']['disgust']) {

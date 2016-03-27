@@ -30,5 +30,6 @@ var app = {
 
 	pictureSnap: function() {
 		navigator.camera.getPicture(app.handlePictureSnap, app.onFail, { quality: 50 });
-	}
+	},
+    
 };
