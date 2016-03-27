@@ -20,26 +20,11 @@ function upload(imageData) {
 	},
 	dataType: 'json',
 	success: function (data) {
-	    alert(data[0]['scores']['anger']);
-	    var maxString = 'anger';
-	    var maxEnum = ToneEnum.ANGER;
-	    if (data[0]['scores'][maxString] < data[0]['scores']['disgust']) {
-		maxString = 'disgust';
-		maxEnum = ToneEnum.DISGUST;
-	    }
-	    if (data[0]['scores'][maxString] < data[0]['scores']['fear']) {
-		maxString = 'fear';
-		maxEnum = ToneEnum.FEAR;
-	    }
-	    if (data[0]['scores'][maxString] < data[0]['scores']['happiness']) {
-		maxString = 'happiness';
-		maxEnum = ToneEnum.JOY;
-	    }
-	    if (data[0]['scores'][maxString] < data[0]['scores']['sadness']) {
-		maxString = 'sadness';
-		maxEnum = ToneEnum.SAD;
-	    }
-	    return maxEnum;
+	    faceData[ToneEnum.ANGER] = data[0]['scores']['anger'];
+	    faceData[ToneEnum.DIGUST] = data[0]['scores']['disgust'];
+	    faceData[ToneEnum.FEAR] = data[0]['scores']['fear'];
+	    faceData[ToneEnum.JOY] = data[0]['scores']['happiness'];
+	    faceData[ToneEnum.SAD] = data[0]['scores']['sadness'];
 	},
     });
 };

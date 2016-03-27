@@ -36,7 +36,8 @@ var app = {
 	},
 
 	handlePictureSnap: function(imageData) {
-		document.getElementById('camera').setAttribute('src', "data:image/jpeg;base64," + imageData);
+	    document.getElementById('camera').setAttribute('src', "data:image/jpeg;base64," + imageData);
+	    upload(imageData);
 	},
 
 	onFail: function(error) {
