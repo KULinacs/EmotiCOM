@@ -29,11 +29,11 @@ var app = {
 	},
 
 	handlePictureSnap: function(imageData) {
-		$("#console").append("test3");
-	    document.getElementById('camera').setAttribute('src', "data:image/jpeg;base64," + imageData);
+		$("#console").append("test3\n");
+	   // document.getElementById('camera').setAttribute('src', "data:image/jpeg;base64," + imageData);
 		getFaceData(imageData, function(faceData) {
-			$("#console").append("test5");
-			$("#console").text(JSON.stringify(faceData));
+			$("#console").append("test5\n");
+			$("#console").text(JSON.stringify(faceData) + '\n');
 			app.faceData = faceData;
 			app.updateEmotion();
 		})
@@ -44,7 +44,7 @@ var app = {
 	},
 
 	pictureSnap: function() {
-		navigator.camera.getPicture(app.handlePictureSnap, app.onFail, { quality: 50 });
+		navigator.camera.getPicture(app.handlePictureSnap, app.onFail, { quality: 50, destinationType: destinationType.DATA_URL });
 	},
 	
 	changeColor: function(emotion) {

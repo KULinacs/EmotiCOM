@@ -3,7 +3,6 @@ var oxfordURL = 'https://api.projectoxford.ai/emotion/v1.0/recognize';
 
 function getFaceData(imageData, callback) {
     // Image Data should be a Base64 encoded string
-	$("#console").append('test7\n');
     var imageDecode = atob(imageData);
     var byteCount = imageDecode.length;
     var bytesArray = new Uint8Array(byteCount);
@@ -32,5 +31,8 @@ function getFaceData(imageData, callback) {
 			$("#console").append('faceData' + '\n');
 			callback(faceData);
 		},
+		error: function(err) {
+			$('#console').text(JSON.stringtify(Object.keys(err)));
+		}
     });
 };

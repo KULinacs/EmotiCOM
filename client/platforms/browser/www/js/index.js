@@ -44,7 +44,7 @@ var app = {
 	},
 
 	pictureSnap: function() {
-		navigator.camera.getPicture(app.handlePictureSnap, app.onFail, { quality: 50 });
+		navigator.camera.getPicture(app.handlePictureSnap, app.onFail, { quality: 50, destinationType: navigator.camera.DestinationType.DATA_URL });
 	},
 	
 	changeColor: function(emotion) {
