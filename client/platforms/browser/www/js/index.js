@@ -72,7 +72,8 @@ var app = {
 		$('.collapsible-header').css({backgroundColor: headerColor});
 		$('.collapsible-body').css({backgroundColor: contentColor});
 		$('.material-icons').css({color: textColor});
-		$('p').css({color: textColor});
+		$('p').css({color: textColor, textShadow: "none"});
+        $('i').css({textShadow: "none"});
 	},
 
 	updateEmotion: function() {
