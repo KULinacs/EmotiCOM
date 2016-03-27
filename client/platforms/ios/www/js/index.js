@@ -77,9 +77,18 @@ var app = {
 		$('.collapsible-header').css({backgroundColor: headerColor});
 		$('.collapsible-body').css({backgroundColor: contentColor});
 		$('.material-icons').css({color: textColor});
+<<<<<<< HEAD
 		$('manual-input-button').css({color: buttonColor});
 		$('p').css({color: textColor, textShadow: "none"});
         $('i').css({textShadow: "none"});
+=======
+<<<<<<< HEAD
+		$('p').css({color: textColor, textShadow: "none"});
+        $('i').css({textShadow: "none"});
+=======
+		$('p').css({color: textColor});
+<<<<<<< HEAD
+>>>>>>> 5912e1b5ce4df1a70eba5b7f0819f13ccdbe1e72
 	},
 
 	submitMind: function() {
@@ -88,6 +97,12 @@ var app = {
 			app.toneData = toneData;
 			app.updateEmotion();
 		});
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 4381865c23c94bd8d8050e296932bf5240e3d51d
+>>>>>>> 43005bc44be12b8c525b1969eb707cbe7b331297
+>>>>>>> 5912e1b5ce4df1a70eba5b7f0819f13ccdbe1e72
 	},
 
 	updateEmotion: function() {

@@ -141,9 +141,24 @@ h1 {
 
 p {
     margin-top: 0;
+<<<<<<< HEAD
     margin-bottom: 0;
 	font-weight: bold;
     vertical-align: center;
+=======
+<<<<<<< HEAD
+    margin-bottom: 0;
+	font-weight: bold;
+    vertical-align: center;
+}
+
+.collapsible-header {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    border-bottom: 1px solid #333 !important;
+}
+=======
+>>>>>>> 5912e1b5ce4df1a70eba5b7f0819f13ccdbe1e72
 }
 
 
@@ -158,9 +173,13 @@ p {
        url("../font/material-design-icons/Material-Design-Icons.woff") format('woff'),
        url("../font/material-design-icons/Material-Design-Icons.ttf") format('truetype');
 }
+<<<<<<< HEAD
 
 .collapsible-header {
     padding-top: 10px !important;
     padding-bottom: 10px !important;
     border-bottom: 1px solid #333 !important;
 }
+=======
+>>>>>>> 43005bc44be12b8c525b1969eb707cbe7b331297
+>>>>>>> 5912e1b5ce4df1a70eba5b7f0819f13ccdbe1e72
