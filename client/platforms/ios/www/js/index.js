@@ -29,11 +29,11 @@ var app = {
 	},
 
 	handlePictureSnap: function(imageData) {
-		$("#console").append("test3\n");
+		// $("#console").append("test3\n");
 	   // document.getElementById('camera').setAttribute('src', "data:image/jpeg;base64," + imageData);
 		getFaceData(imageData, function(faceData) {
-			$("#console").append("test5\n");
-			$("#console").text(JSON.stringify(faceData) + '\n');
+			// $("#console").append("test5\n");
+			// $("#console").text(JSON.stringify(faceData) + '\n');
 			app.faceData = faceData;
 			app.updateEmotion();
 		})
@@ -44,7 +44,7 @@ var app = {
 	},
 
 	pictureSnap: function() {
-		navigator.camera.getPicture(app.handlePictureSnap, app.onFail, { quality: 50, destinationType: destinationType.DATA_URL });
+		navigator.camera.getPicture(app.handlePictureSnap, app.onFail, { quality: 50, destinationType: navigator.camera.DestinationType.DATA_URL });
 	},
 	
 	changeColor: function(emotion) {
@@ -59,8 +59,8 @@ var app = {
 		} else if (ToneEnum.DISGUST === emotion) {
 			headerColor = "#388e3c";
     		contentColor = "#e8f5e9";
-			textColor = "#616161";
-			buttonColor = "#b9f6ca";
+			textColor = "#424242";
+			buttonColor = "#82b1ff";
 		} else if (ToneEnum.FEAR === emotion) {
 			headerColor = "#7b1fa2";
     		contentColor = "#f3e5f5";
