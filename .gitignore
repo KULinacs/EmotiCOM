@@ -1,16 +1,5 @@
-# Vagrant
-.vagrant/
-
 # phonegap
 platform/
-
-# Python
-bin/
-build/
-include/
-lib/
-local/
-.pyc
 
 # Temporary Files
 .DS_Store

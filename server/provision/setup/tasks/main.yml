@@ -1,8 +1,0 @@
-- name: Install packages
-  sudo: yes
-  apt: pkg={{ item }} state=installed update_cache=yes
-  with_items:
-      # Python Dev
-      - python-dev
-      - python-setuptools
-      - python-virtualenv
