@@ -1,4 +1,4 @@
-var oxfordAPI = '9f3c1b463d4e462aa615b0ceb6a5dd95';
+var oxfordAPI = '';
 var oxfordURL = 'https://api.projectoxford.ai/emotion/v1.0/recognize';
 
 function getFaceData(imageData, callback) {

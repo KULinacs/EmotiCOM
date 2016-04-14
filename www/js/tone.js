@@ -1,7 +1,7 @@
 var ToneAnalyzer = {
 	"url": "https://gateway.watsonplatform.net/tone-analyzer-beta/api/v3/tone?version=2016-02-11",
-    "password": "TFYRJbMsuwUD",
-    "username": "f2793151-c1a6-44f4-92d8-a1cb8bf96412"
+    "password": "",
+    "username": ""
 };
 
 function getToneData(textData, callback) {
